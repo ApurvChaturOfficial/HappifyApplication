@@ -43,9 +43,11 @@ const GlobalLayout = () => {
   return (
     <React.Fragment>
       {/* GlobalLayout */}
-      <GlobalComponent>
-        <Outlet />
-      </GlobalComponent>
+      { APICall.retrieveAPIResponse.isLoading ? <div className='min-h-screen flex justify-center items-center' >Loading...</div> : (
+        <GlobalComponent>
+          <Outlet />
+        </GlobalComponent>
+      )}
     </React.Fragment>
   )
 }
