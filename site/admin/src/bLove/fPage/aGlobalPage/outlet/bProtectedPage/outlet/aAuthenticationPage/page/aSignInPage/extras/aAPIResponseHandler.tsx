@@ -47,7 +47,7 @@ const apiResponseHandler = {
           })
         )
 
-        return navigate(fullRoute.aGlobalRoute.bProtectedRoute.bAuthorizationRoute.bSidebarRoute.aDashboardRoute)
+        return navigate(fullRoute.aGlobalRoute.aUnprotectedRoute.aHomeRoute)
       }
 
       return;

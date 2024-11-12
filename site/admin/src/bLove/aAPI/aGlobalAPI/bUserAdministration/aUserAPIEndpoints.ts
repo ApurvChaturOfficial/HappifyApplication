@@ -77,10 +77,33 @@ const userAPIEndpoint = apiConnection.injectEndpoints({
       }),
     }),
 
+    userLogoutAPI: builder.query({
+      query: () => ({
+        url: `user/auth/logout/`,
+        method: "GET",
+      }),
+    }),
+
     userProfileRetrieveAPI: builder.query({
       query: () => ({
         url: `user/profile/retrieve/`,
         method: "GET",
+      })
+    }),
+
+    userProfileUpdateAPI: builder.mutation({
+      query: (data) => ({
+        url: `user/profile/update/`,
+        method: "PUT",
+        body: data.body
+      })
+    }),
+
+    userProfilePasswordUpdateAPI: builder.mutation({
+      query: (data) => ({
+        url: `user/profile/password-update/`,
+        method: "POST",
+        body: data.body
       })
     }),
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import fullRoute from "@/bLove/gRoute/bFullRoute";
@@ -12,12 +12,6 @@ type HomeComponentType = {
 const HomeComponent = (props: HomeComponentType) => {
   // Destructure Props
   const { ReduxCall } = props;
-
-
-  useEffect(() => {
-    console.log(ReduxCall.state)
-  }, [ReduxCall.state])
-  
 
   // JSX
   return (

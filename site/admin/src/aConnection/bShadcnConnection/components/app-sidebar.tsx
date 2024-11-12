@@ -25,6 +25,7 @@ import {
 } from "@/aConnection/bShadcnConnection/components/ui/sidebar"
 import fullRoute from "@/bLove/gRoute/bFullRoute"
 
+
 // This is sample data.
 const data = {
   user: {
@@ -201,7 +202,7 @@ const data = {
   ],
 }
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export function AppSidebar({ ReduxCall, APICall, navigate, ...props }: (React.ComponentProps<typeof Sidebar> & { ReduxCall?: any,APICall?: any, navigate?: any })) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
@@ -212,7 +213,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         {/* <NavProjects projects={data.projects} /> */}
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <NavUser user={data.user} ReduxCall={ReduxCall} APICall={APICall} navigate={navigate} />
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>

@@ -1,9 +1,9 @@
 import React from "react"
-
-import HomeComponent from "@/bLove/cComponent/aGlobalComponent/outlet/aUnprotectedComponent/children/aHomeComponent";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/aConnection/dReduxConnection";
 import globalSlice from "@/bLove/bRedux/aGlobalSlice";
+
+import HomeComponent from "@/bLove/cComponent/aGlobalComponent/outlet/aUnprotectedComponent/children/aHomeComponent";
 
 
 const HomePage = () => {
@@ -19,7 +19,7 @@ const HomePage = () => {
     <React.Fragment>
       {/* HomePage */}
       <HomeComponent 
-        ReduxCall={ReduxCall} 
+        ReduxCall={ReduxCall}
       />
     </React.Fragment>
   )
