@@ -17,8 +17,10 @@ import {
 } from "@/aConnection/bShadcnConnection/components/ui/sidebar"
 
 export function NavMain({
+  header,
   items,
 }: {
+  header: string,
   items: {
     title: string
     url: string
@@ -32,7 +34,7 @@ export function NavMain({
 }) {
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>For Developer</SidebarGroupLabel>
+      <SidebarGroupLabel>{header}</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => (
           <Collapsible

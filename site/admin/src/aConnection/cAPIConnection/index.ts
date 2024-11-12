@@ -11,6 +11,7 @@ const apiConnection = createApi({
     "baseManyToOneList", "baseManyToManyList", "baseList", "baseOneToOneList", "baseOneToManyList", 
     "MenuList", "RoleList", "UserList",
     "ProductList", "CategoryList", "TagList", 
+    "questionList", "factorList", 
   ],
   endpoints: () => ({})
 })

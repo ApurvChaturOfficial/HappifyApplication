@@ -84,6 +84,23 @@ const endpointRoute = {
               dUpdateRoute: "menu-update",
               eDeleteRoute: "menu-delete",
             },
+          },
+
+          cHappifyMainRoute: {
+            aQuestionRoute: {
+              aListRoute: "question-list",
+              bCreateRoute: "question-create",
+              cRetrieveRoute: "question-retrieve",
+              dUpdateRoute: "question-update",
+              eDeleteRoute: "question-delete",
+            },
+            bFactorRoute: {
+              aListRoute: "factor-list",
+              bCreateRoute: "factor-create",
+              cRetrieveRoute: "factor-retrieve",
+              dUpdateRoute: "factor-update",
+              eDeleteRoute: "factor-delete",
+            },
           }
         }
       }

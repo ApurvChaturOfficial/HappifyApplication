@@ -81,6 +81,19 @@ const MenuRetrievePage = React.lazy(() => import('@/bLove/fPage/aGlobalPage/outl
 const MenuUpdatePage = React.lazy(() => import('@/bLove/fPage/aGlobalPage/outlet/bProtectedPage/outlet/bAuthorizationPage/outlet/bSidebarPage/page/bUserAdministrationPage/cMenuPage/dUpdatePage'));
 const MenuDeletePage = React.lazy(() => import('@/bLove/fPage/aGlobalPage/outlet/bProtectedPage/outlet/bAuthorizationPage/outlet/bSidebarPage/page/bUserAdministrationPage/cMenuPage/eDeletePage'));
 
+// Happify main
+const QuestionListPage = React.lazy(() => import('@/bLove/fPage/aGlobalPage/outlet/bProtectedPage/outlet/bAuthorizationPage/outlet/bSidebarPage/page/cHappifyMainPage/aQuestionPage/aListPage'));
+const QuestionCreatePage = React.lazy(() => import('@/bLove/fPage/aGlobalPage/outlet/bProtectedPage/outlet/bAuthorizationPage/outlet/bSidebarPage/page/cHappifyMainPage/aQuestionPage/bCreatePage'));
+const QuestionRetrievePage = React.lazy(() => import('@/bLove/fPage/aGlobalPage/outlet/bProtectedPage/outlet/bAuthorizationPage/outlet/bSidebarPage/page/cHappifyMainPage/aQuestionPage/cRetrievePage'));
+const QuestionUpdatePage = React.lazy(() => import('@/bLove/fPage/aGlobalPage/outlet/bProtectedPage/outlet/bAuthorizationPage/outlet/bSidebarPage/page/cHappifyMainPage/aQuestionPage/dUpdatePage'));
+const QuestionDeletePage = React.lazy(() => import('@/bLove/fPage/aGlobalPage/outlet/bProtectedPage/outlet/bAuthorizationPage/outlet/bSidebarPage/page/cHappifyMainPage/aQuestionPage/eDeletePage'));
+
+const FactorListPage = React.lazy(() => import('@/bLove/fPage/aGlobalPage/outlet/bProtectedPage/outlet/bAuthorizationPage/outlet/bSidebarPage/page/cHappifyMainPage/bFactorPage/aListPage'));
+const FactorCreatePage = React.lazy(() => import('@/bLove/fPage/aGlobalPage/outlet/bProtectedPage/outlet/bAuthorizationPage/outlet/bSidebarPage/page/cHappifyMainPage/bFactorPage/bCreatePage'));
+const FactorRetrievePage = React.lazy(() => import('@/bLove/fPage/aGlobalPage/outlet/bProtectedPage/outlet/bAuthorizationPage/outlet/bSidebarPage/page/cHappifyMainPage/bFactorPage/cRetrievePage'));
+const FactorUpdatePage = React.lazy(() => import('@/bLove/fPage/aGlobalPage/outlet/bProtectedPage/outlet/bAuthorizationPage/outlet/bSidebarPage/page/cHappifyMainPage/bFactorPage/dUpdatePage'));
+const FactorDeletePage = React.lazy(() => import('@/bLove/fPage/aGlobalPage/outlet/bProtectedPage/outlet/bAuthorizationPage/outlet/bSidebarPage/page/cHappifyMainPage/bFactorPage/eDeletePage'));
+
 
 const AppConnection = () => {
   // JSX
@@ -180,6 +193,18 @@ const AppConnection = () => {
                   <Route path={`${endpointRoute.aGlobalRoute.bProtectedRoute.bAuthorizationRoute.bSidebarRoute.bUserAdministration.cMenuRoute.cRetrieveRoute}/:id`} element={<MenuRetrievePage />} />
                   <Route path={`${endpointRoute.aGlobalRoute.bProtectedRoute.bAuthorizationRoute.bSidebarRoute.bUserAdministration.cMenuRoute.dUpdateRoute}/:id`} element={<MenuUpdatePage />} />
                   <Route path={`${endpointRoute.aGlobalRoute.bProtectedRoute.bAuthorizationRoute.bSidebarRoute.bUserAdministration.cMenuRoute.eDeleteRoute}/:id`} element={<MenuDeletePage />} />
+                  
+                  <Route path={`${endpointRoute.aGlobalRoute.bProtectedRoute.bAuthorizationRoute.bSidebarRoute.cHappifyMainRoute.aQuestionRoute.aListRoute}`} element={<QuestionListPage />} />
+                  <Route path={`${endpointRoute.aGlobalRoute.bProtectedRoute.bAuthorizationRoute.bSidebarRoute.cHappifyMainRoute.aQuestionRoute.bCreateRoute}`} element={<QuestionCreatePage />} />
+                  <Route path={`${endpointRoute.aGlobalRoute.bProtectedRoute.bAuthorizationRoute.bSidebarRoute.cHappifyMainRoute.aQuestionRoute.cRetrieveRoute}/:id`} element={<QuestionRetrievePage />} />
+                  <Route path={`${endpointRoute.aGlobalRoute.bProtectedRoute.bAuthorizationRoute.bSidebarRoute.cHappifyMainRoute.aQuestionRoute.dUpdateRoute}/:id`} element={<QuestionUpdatePage />} />
+                  <Route path={`${endpointRoute.aGlobalRoute.bProtectedRoute.bAuthorizationRoute.bSidebarRoute.cHappifyMainRoute.aQuestionRoute.eDeleteRoute}/:id`} element={<QuestionDeletePage />} />
+                                    
+                  <Route path={`${endpointRoute.aGlobalRoute.bProtectedRoute.bAuthorizationRoute.bSidebarRoute.cHappifyMainRoute.bFactorRoute.aListRoute}`} element={<FactorListPage />} />
+                  <Route path={`${endpointRoute.aGlobalRoute.bProtectedRoute.bAuthorizationRoute.bSidebarRoute.cHappifyMainRoute.bFactorRoute.bCreateRoute}`} element={<FactorCreatePage />} />
+                  <Route path={`${endpointRoute.aGlobalRoute.bProtectedRoute.bAuthorizationRoute.bSidebarRoute.cHappifyMainRoute.bFactorRoute.cRetrieveRoute}/:id`} element={<FactorRetrievePage />} />
+                  <Route path={`${endpointRoute.aGlobalRoute.bProtectedRoute.bAuthorizationRoute.bSidebarRoute.cHappifyMainRoute.bFactorRoute.dUpdateRoute}/:id`} element={<FactorUpdatePage />} />
+                  <Route path={`${endpointRoute.aGlobalRoute.bProtectedRoute.bAuthorizationRoute.bSidebarRoute.cHappifyMainRoute.bFactorRoute.eDeleteRoute}/:id`} element={<FactorDeletePage />} />
                   
                 </Route>
               </Route>

@@ -22,6 +22,9 @@ import { productRouter } from '../bLove/aMCR/cRoute/cProductManagement/aProductR
 import { categoryRouter } from '../bLove/aMCR/cRoute/cProductManagement/bCategoryRoute'
 import { tagRouter } from '../bLove/aMCR/cRoute/cProductManagement/cTagRoute'
 
+import { questionRouter } from '../bLove/aMCR/cRoute/cHappifyMain/aQuestionRoute'
+import { factorRouter } from '../bLove/aMCR/cRoute/cHappifyMain/bFactorRoute'
+
 
 const appConnection = express();
 
@@ -54,6 +57,9 @@ appConnection.use("/api/v1/menu/", menuRouter);
 appConnection.use("/api/v1/product/", productRouter);
 appConnection.use("/api/v1/category/", categoryRouter);
 appConnection.use("/api/v1/tag/", tagRouter);
+
+appConnection.use("/api/v1/question/", questionRouter);
+appConnection.use("/api/v1/factor/", factorRouter);
 
 // Error Middleware
 appConnection.use(errorMiddleware);

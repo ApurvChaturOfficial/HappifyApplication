@@ -15,6 +15,8 @@ import { RoleModel } from '../aMCR/aModel/bUserAdministration/bRoleModel';
 import { ProductModel } from '../aMCR/aModel/cProductManagement/aProductModel';
 import { CategoryModel } from '../aMCR/aModel/cProductManagement/bCategoryModel';
 import { TagModel } from '../aMCR/aModel/cProductManagement/cTagModel';
+import { QuestionModel } from '../aMCR/aModel/cHappifyMain/aQuestionModel';
+import { FactorModel } from '../aMCR/aModel/cHappifyMain/bFactorModel';
 
 
 const validatorMiddleware = (request: express.Request, response: express.Response, next: express.NextFunction) => {
@@ -810,6 +812,100 @@ const tagDeleteValidation = () => [
     })
 ]
 
+// Question
+const questionListValidation = () => []
+
+const questionCreateValidation = () => [
+  body("aTitle")
+    .notEmpty().withMessage("Please enter title"),
+]
+
+const questionRetrieveValidation = () => [
+  param("id")
+    .custom(value => {
+      if (!isValidObjectId(value)) throw new ErrorUtility("Please provide valid parameter", 404)
+      return true;
+    })
+    .custom(async value => {
+      const retrieve = await QuestionModel.findById(value);
+      if (!retrieve) throw new ErrorUtility("Question Not Found", 404)
+      return true;
+    }),
+]
+
+const questionUpdateValidation = () => [
+  param("id")
+    .custom(value => {
+      if (!isValidObjectId(value)) throw new ErrorUtility("Please provide valid parameter", 404)
+      return true;
+    })
+    .custom(async value => {
+     const retrieve = await QuestionModel.findById(value);
+      if (!retrieve) throw new ErrorUtility("Question Not Found", 404)
+      return true;
+    }),
+]
+
+const questionDeleteValidation = () => [
+  param("id")
+    .custom(value => {
+      if (!isValidObjectId(value)) throw new ErrorUtility("Please provide valid parameter", 404)
+      return true;
+    })
+    .custom(async value => {
+      const retrieve = await QuestionModel.findById(value);
+      if (!retrieve) throw new ErrorUtility("Question Not Found", 404)
+      return true;
+    })
+]
+
+// Factor
+const factorListValidation = () => []
+
+const factorCreateValidation = () => [
+  body("aTitle")
+    .notEmpty().withMessage("Please enter title"),
+]
+
+const factorRetrieveValidation = () => [
+  param("id")
+    .custom(value => {
+      if (!isValidObjectId(value)) throw new ErrorUtility("Please provide valid parameter", 404)
+      return true;
+    })
+    .custom(async value => {
+      const retrieve = await FactorModel.findById(value);
+      if (!retrieve) throw new ErrorUtility("Factor Not Found", 404)
+      return true;
+    }),
+]
+
+const factorUpdateValidation = () => [
+  param("id")
+    .custom(value => {
+      if (!isValidObjectId(value)) throw new ErrorUtility("Please provide valid parameter", 404)
+      return true;
+    })
+    .custom(async value => {
+     const retrieve = await FactorModel.findById(value);
+      if (!retrieve) throw new ErrorUtility("Factor Not Found", 404)
+      return true;
+    }),
+]
+
+const factorDeleteValidation = () => [
+  param("id")
+    .custom(value => {
+      if (!isValidObjectId(value)) throw new ErrorUtility("Please provide valid parameter", 404)
+      return true;
+    })
+    .custom(async value => {
+      const retrieve = await FactorModel.findById(value);
+      if (!retrieve) throw new ErrorUtility("Factor Not Found", 404)
+      return true;
+    })
+]
+
 export default validatorMiddleware;
 export {
   baseManyToOneListValidation,
@@ -886,4 +982,16 @@ export {
   tagRetrieveValidation,
   tagUpdateValidation,
   tagDeleteValidation,
+
+  questionListValidation,
+  questionCreateValidation,
+  questionRetrieveValidation,
+  questionUpdateValidation,
+  questionDeleteValidation,
+
+  factorListValidation,
+  factorCreateValidation,
+  factorRetrieveValidation,
+  factorUpdateValidation,
+  factorDeleteValidation,
 }
