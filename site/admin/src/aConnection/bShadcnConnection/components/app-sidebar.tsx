@@ -107,7 +107,7 @@ const data = {
       isActive: false,
       items: [
         {
-          title: "Question",
+          title: "questionnaire",
           url: fullRoute.aGlobalRoute.bProtectedRoute.bAuthorizationRoute.bSidebarRoute.cHappifyMainRoute.aQuestionRoute.aListRoute,
         },
         {

@@ -32,7 +32,7 @@ const appConnection = express();
 appConnection.use(morganMiddleware("dev"));
 appConnection.use(corsMiddleware({ origin: process.env.ENVIRONMENT === "Production" ?
   [
-    "https://happify-001.netlify.app",
+    "https://happify-001.netlify.app/",
   ] : 
   [
     "http://localhost:5173",
