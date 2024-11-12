@@ -19,7 +19,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ReduxProvider store={reduxConnection} >
       <HelmetProvider>
-        <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
           <BrowserRouter>
             <AppConnection />
           </BrowserRouter>
